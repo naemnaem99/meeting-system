@@ -1,0 +1,35 @@
+{
+  "name": "meeting-system",
+  "displayName": "D조 회의록 시스템",
+  "description": "회의 내용을 자동으로 구조화하고 Google Calendar에 일정을 등록하는 통합 시스템",
+  "version": "1.0.0",
+  "author": "D조 팀",
+  "skills": [
+    {
+      "name": "meeting",
+      "path": "./meeting",
+      "displayName": "회의록 작성",
+      "description": "회의 내용을 구조화된 회의록으로 정리하고 Notion에 자동 저장"
+    },
+    {
+      "name": "meeting-cal",
+      "path": "./meeting-cal",
+      "displayName": "캘린더 등록",
+      "description": "Notion 회의록에서 내 액션 아이템을 읽어 Google Calendar에 등록"
+    }
+  ],
+  "requirements": {
+    "mcp": [
+      "Notion",
+      "Google Calendar"
+    ]
+  },
+  "tags": [
+    "meeting",
+    "calendar",
+    "notion",
+    "automation",
+    "team",
+    "collaboration"
+  ]
+}

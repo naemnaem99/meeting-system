@@ -1,0 +1,21 @@
+{
+  "name": "@d-jo/meeting-system",
+  "version": "1.0.0",
+  "description": "D조 회의록 자동 정리 시스템 - 회의 내용을 구조화하고 Google Calendar에 등록",
+  "author": "D조 팀",
+  "license": "MIT",
+  "keywords": [
+    "meeting",
+    "calendar",
+    "notion",
+    "automation",
+    "team-collaboration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-jo/meeting-system.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
