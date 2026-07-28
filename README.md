@@ -1,6 +1,6 @@
 # D조 회의록 자동 정리 시스템
 
-회의 내용을 자동으로 구조화하고, 각 팀원의 액션 아이템을 Google Calendar에 등록하는 Claude Code 플러그인입니다.
+회의 내용을 자동으로 구조화하고 Notion에 저장, 완료 상황을 자동 추적하는 Claude Code 플러그인입니다.
 
 ---
 
@@ -8,13 +8,17 @@
 
 ### `/meeting` — 회의록 작성
 - 회의 내용 입력 → 자동으로 구조화
-- 결정사항, 액션 아이템, 논의 내용으로 분류
+- 결정사항, 액션 아이템 (담당자·할 일·기한·상태), 논의 내용
 - Notion D조_한컴 > 1.회의록 DB에 자동 저장
 
 ### `/meeting-cal` — 캘린더 등록
 - Notion 회의록에서 본인 담당 항목만 추출
-- 기한이 있는 일정을 Google Calendar에 등록
-- 자동으로 회의록 링크 추가
+- 기한이 있는 일정을 Google Calendar에 추가
+- 캘린더는 마감일 상기용 (진행은 Notion에서 추적)
+
+### `/meeting-check` — 완료 표기
+- 완료한 업무 입력 → Notion 상태 자동 "완료 ✅"
+- 진행 상황을 실시간으로 팀에 공유
 
 ---
 
@@ -36,23 +40,31 @@
 ```
 /meeting
 → 회의 내용, 날짜, 참석자 입력
-→ Notion 자동 저장 ✅
+→ Notion 자동 저장 (상태: 미정) ✅
 ```
 
-**각 팀원:**
+**각 팀원이:**
 ```
 /meeting-cal
 → 본인 이름, 회의록 선택
-→ Google Calendar 자동 등록 ✅
+→ Google Calendar에 마감일 추가 ✅
+```
+
+**진행 중:**
+```
+/meeting-check
+→ 완료한 일 입력
+→ Notion 상태 자동 업데이트 (완료 ✅)
 ```
 
 ---
 
 ## 📖 상세 가이드
 
-- **[회의록 작성 (`/meeting`)](./meeting/README.md)**
-- **[캘린더 등록 (`/meeting-cal`)](./meeting-cal/README.md)**
-- **[팀 종합 가이드](../meeting-system-guide.md)**
+- **[회의록 작성 (`/meeting`)](./meeting/README.md)** — 회의 정리 담당자용
+- **[캘린더 등록 (`/meeting-cal`)](./meeting-cal/README.md)** — 마감일 알림용
+- **[완료 표기 (`/meeting-check`)](./meeting-check/README.md)** — 진행 상황 추적용
+- **[팀 종합 가이드](../meeting-system-guide.md)** — 전체 workflow 설명
 
 ---
 
