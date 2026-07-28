@@ -16,6 +16,12 @@
       "path": "./meeting-cal",
       "displayName": "캘린더 등록",
       "description": "Notion 회의록에서 내 액션 아이템을 읽어 Google Calendar에 등록"
+    },
+    {
+      "name": "meeting-check",
+      "path": "./meeting-check",
+      "displayName": "완료 표기",
+      "description": "완료한 액션 아이템을 Notion 회의록에 자동 표기"
     }
   ],
   "requirements": {
